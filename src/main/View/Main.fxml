@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="611.0" maxWidth="1100.0" minHeight="600.0" minWidth="1100.0" prefHeight="611.0" prefWidth="1100.0" style="-fx-background-color: #404040;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller.MainScreenController">
+   <children>
+      <Label fx:id="currentUserLbl" layoutX="77.0" layoutY="14.0" text="(no user)" textFill="#58e12f">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TabPane fx:id="mainTabPane" layoutY="60.0" prefHeight="550.0" prefWidth="1100.0" snapToPixel="false" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="175.0" tabMinWidth="100.0">
+        <tabs>
+          <Tab closable="false" text="Customers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane>
+                           <content>
+                              <TableView fx:id="customerTableView" prefHeight="941.0" prefWidth="1100.0">
+                                <columns>
+                                  <TableColumn fx:id="customerId" prefWidth="75.0" text="ID" />
+                                  <TableColumn fx:id="customerName" prefWidth="225.0" text="Name" />
+                                    <TableColumn fx:id="customerAddress" prefWidth="300.0" text="Address" />
+                                    <TableColumn fx:id="customerZipcode" prefWidth="125.0" resizable="false" text="Zipcode" />
+                                    <TableColumn fx:id="customerPhone" prefWidth="223.0" resizable="false" text="Phone" />
+                                    <TableColumn fx:id="customerDivision" prefWidth="148.0" resizable="false" text="Division" />
+                                </columns>
+                              </TableView>
+                           </content>
+                        </ScrollPane>
+                        <HBox layoutY="475.0" prefHeight="52.0" prefWidth="1100.0" style="-fx-background-color: #333;">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#addCustomer" prefWidth="100.0" text="Add">
+                                 <HBox.margin>
+                                    <Insets left="775.0" right="5.0" top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#modifyCustomer" prefWidth="100.0" text="Update">
+                                 <HBox.margin>
+                                    <Insets right="5.0" top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#deleteCustomer" prefWidth="100.0" text="Delete">
+                                 <HBox.margin>
+                                    <Insets top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab closable="false" text="Appointments">
+            <content>
+              <AnchorPane>
+                     <children>
+                        <TabPane prefHeight="475.0" prefWidth="1100.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="150.0" tabMinWidth="100.0">
+                          <tabs>
+                          <Tab text="All">
+                              <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                      <children>
+                                          <ScrollPane prefHeight="527.0">
+                                             <content>
+                                                <TableView fx:id="allApptTable" prefHeight="1000.0" prefWidth="1075.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="allApptId" prefWidth="70.0" resizable="false" text="Appt. ID" />
+                                                        <TableColumn fx:id="allApptTitle" prefWidth="98.0" resizable="false" text="Title" />
+                                                        <TableColumn fx:id="allApptDesc" prefWidth="175.0" resizable="false" text="Description" />
+                                                        <TableColumn fx:id="allApptLocation" minWidth="0.0" prefWidth="126.0" resizable="false" text="Location" />
+                                                        <TableColumn fx:id="allApptContact" prefWidth="124.0" resizable="false" text="Contact" />
+                                                        <TableColumn fx:id="allApptType" prefWidth="89.0" resizable="false" text="Type" />
+                                                        <TableColumn fx:id="allApptStart" prefWidth="136.0" text="Start" />
+                                                        <TableColumn fx:id="allApptEnd" prefWidth="143.0" text="End" />
+                                                        <TableColumn fx:id="allCustomerId" prefWidth="111.0" text="Customer ID" />
+                                                    </columns>
+                                                </TableView>
+                                             </content>
+                                          </ScrollPane>
+                                      </children>
+                                  </AnchorPane>
+                              </content>
+                          </Tab>
+                            <Tab text="Next 7 Days">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="apptThisWeekTable" prefHeight="525.0" prefWidth="1075.0">
+                                            <columns>
+                                                <TableColumn fx:id="apptWeekID" prefWidth="70.0" resizable="false" text="Appt. ID" />
+                                                <TableColumn fx:id="apptWeekTitle" prefWidth="75.0" resizable="false" text="Title" />
+                                                <TableColumn fx:id="apptWeekDesc" prefWidth="230.0" resizable="false" text="Description" />
+                                                <TableColumn fx:id="apptWeekLocation" minWidth="0.0" prefWidth="94.0" resizable="false" text="Location" />
+                                                <TableColumn fx:id="apptWeekContact" prefWidth="124.0" resizable="false" text="Contact" />
+                                                <TableColumn fx:id="apptWeekType" prefWidth="89.0" resizable="false" text="Type" />
+                                                <TableColumn fx:id="apptWeekStart" prefWidth="150.0" text="Start" />
+                                                <TableColumn fx:id="apptWeekEnd" prefWidth="150.0" text="End" />
+                                                <TableColumn fx:id="apptWeekCustID" prefWidth="90.0" text="Customer ID" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Next 30 Days">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="apptThisMonthTable" prefHeight="525.0" prefWidth="1075.0">
+                                            <columns>
+                                                <TableColumn fx:id="apptMonthID" prefWidth="70.0" resizable="false" text="Appt. ID" />
+                                                <TableColumn fx:id="apptMonthTitle" prefWidth="75.0" resizable="false" text="Title" />
+                                                <TableColumn fx:id="apptMonthDesc" prefWidth="230.0" resizable="false" text="Description" />
+                                                <TableColumn fx:id="apptMonthLocation" minWidth="0.0" prefWidth="94.0" resizable="false" text="Location" />
+                                                <TableColumn fx:id="apptMonthContact" prefWidth="124.0" resizable="false" text="Contact" />
+                                                <TableColumn fx:id="apptMonthType" prefWidth="89.0" resizable="false" text="Type" />
+                                                <TableColumn fx:id="apptMonthStart" prefWidth="150.0" text="Start" />
+                                                <TableColumn fx:id="apptMonthEnd" prefWidth="150.0" text="End" />
+                                                <TableColumn fx:id="apptMonthCustID" prefWidth="90.0" text="Customer ID" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                        <HBox layoutY="475.0" prefHeight="50.0" prefWidth="1100.0" style="-fx-background-color: #333;" translateZ="2.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#addAppointment" prefWidth="100.0" text="Add">
+                                 <HBox.margin>
+                                    <Insets left="775.0" right="5.0" top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#modifyAppointment" prefWidth="100.0" text="Update">
+                                 <HBox.margin>
+                                    <Insets right="5.0" top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#deleteAppointment" prefWidth="100.0" text="Delete">
+                                 <HBox.margin>
+                                    <Insets top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab closable="false" text="Contacts">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="contactTableView" prefHeight="521.0" prefWidth="1100.0">
+                           <columns>
+                              <TableColumn fx:id="contactId" prefWidth="75.0" resizable="false" text="ID" />
+                              <TableColumn fx:id="contactName" prefWidth="225.0" text="Name" />
+                              <TableColumn fx:id="contactEmail" prefWidth="300.0" text="Email" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Reports">
+               <content>
+                  <AnchorPane prefHeight="521.0" prefWidth="1100.0" style="-fx-background-color: #404040;">
+                     <children>
+                        <Pane layoutX="400.0" layoutY="111.0" prefHeight="300.0" prefWidth="300.0">
+                           <children>
+                              <Button layoutX="82.0" layoutY="66.0" mnemonicParsing="false" onAction="#apptsByTypeReport" text="Appointments By Type" />
+                              <Button layoutX="76.0" layoutY="138.0" mnemonicParsing="false" onAction="#contactScheduleReport" text="Contact Schedule Report" />
+                              <Button layoutX="57.0" layoutY="212.0" mnemonicParsing="false" onAction="#totalApptsByCustomer" text="Total Appointments By Customer" />
+                           </children>
+                        </Pane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="14.0" layoutY="14.0" text="User: " textFill="#e8e8e8">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>

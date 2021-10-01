@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="521.0" prefWidth="1100.0" stylesheets="@moderna-dark.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller.ReportTwoController">
+   <children>
+      <TabPane prefHeight="521.0">
+         <tabs>
+            <Tab closable="false" text="Anika Costa">
+               <content>
+                  <TableView fx:id="CostaScheduleTable" prefHeight="490.0" prefWidth="1100.0">
+                    <columns>
+                      <TableColumn fx:id="CostaContactName" prefWidth="150.0" text="Contact Name" />
+                      <TableColumn fx:id="CostaAppointmentID" prefWidth="100.0" text="Appointment ID" />
+                        <TableColumn fx:id="CostaAppointmentTitle" prefWidth="150.0" text="Title" />
+                        <TableColumn fx:id="CostaAppointmentDesc" prefWidth="190.0" text="Description" />
+                        <TableColumn fx:id="CostaAppointmentStart" prefWidth="201.0" text="Start" />
+                        <TableColumn fx:id="CostaAppointmentEnd" prefWidth="185.0" text="End" />
+                        <TableColumn fx:id="CostaCustomerID" prefWidth="124.0" text="Customer ID" />
+                    </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Daniel Garcia">
+               <content>
+                  <TableView fx:id="GarciaScheduleTable" prefHeight="490.0" prefWidth="1100.0">
+                     <columns>
+                        <TableColumn fx:id="GarciaContactName" prefWidth="150.0" text="Contact Name" />
+                        <TableColumn fx:id="GarciaAppointmentID" prefWidth="100.0" text="Appointment ID" />
+                        <TableColumn fx:id="GarciaAppointmentTitle" prefWidth="150.0" text="Title" />
+                        <TableColumn fx:id="GarciaAppointmentDesc" prefWidth="225.0" text="Description" />
+                        <TableColumn fx:id="GarciaAppointmentStart" prefWidth="200.0" text="Start" />
+                        <TableColumn fx:id="GarciaAppointmentEnd" prefWidth="200.0" text="End" />
+                        <TableColumn fx:id="GarciaCustomerID" prefWidth="75.0" text="Customer ID" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Li Lee">
+               <content>
+                  <TableView fx:id="LeeScheduleTable" prefHeight="490.0" prefWidth="1100.0">
+                     <columns>
+                        <TableColumn fx:id="LeeContactName" prefWidth="150.0" text="Contact Name" />
+                        <TableColumn fx:id="LeeAppointmentID" prefWidth="100.0" text="Appointment ID" />
+                        <TableColumn fx:id="LeeAppointmentTitle" prefWidth="150.0" text="Title" />
+                        <TableColumn fx:id="LeeAppointmentDesc" prefWidth="225.0" text="Description" />
+                        <TableColumn fx:id="LeeAppointmentStart" prefWidth="200.0" text="Start" />
+                        <TableColumn fx:id="LeeAppointmentEnd" prefWidth="200.0" text="End" />
+                        <TableColumn fx:id="LeeCustomerID" prefWidth="75.0" text="Customer ID" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="1100.0" style="-fx-background-color: #404040;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller.AppointmentScreenController">
+   <children>
+      <VBox layoutX="47.0" layoutY="94.0" prefHeight="423.0" prefWidth="1000.0">
+         <children>
+            <GridPane prefHeight="435.0" prefWidth="990.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="224.199951171875" minWidth="10.0" prefWidth="212.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="251.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.2000274658203" minWidth="10.0" prefWidth="252.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.2000274658203" minWidth="10.0" prefWidth="276.2000274658203" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="apptIDTxt" disable="true" editable="false" style="-fx-text-fill: #fc0303;" text="Auto ID" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></TextField>
+                  <TextField fx:id="title_textfield" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="description_txt" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <TextField fx:id="location_textfield" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <children>
+                        <GridPane prefHeight="56.0" prefWidth="278.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.20001220703125" minWidth="10.0" prefWidth="149.20001220703125" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.19998168945312" minWidth="10.0" prefWidth="126.79998779296875" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <DatePicker fx:id="end_datepicker" prefHeight="26.0" prefWidth="147.0" />
+                              <ChoiceBox fx:id="end_time_combobox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="96.0" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="17.0" />
+                                 </GridPane.margin>
+                              </ChoiceBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="204.0" text="Appointment ID" textFill="WHITE">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="customerLbl" contentDisplay="CENTER" prefHeight="30.0" prefWidth="263.0" text="Customer" textFill="WHITE" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="65.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="192.0" text="Title" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" prefHeight="34.0" prefWidth="255.0" text="Description" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="65.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="36.0" prefWidth="200.0" text="Location" textFill="WHITE" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="contactLbl" contentDisplay="CENTER" prefHeight="34.0" prefWidth="251.0" text="Contact" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="65.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="34.0" prefWidth="188.0" text="Type" textFill="WHITE" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" prefHeight="22.0" prefWidth="269.0" text="Start Time" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="65.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="End Time" textFill="WHITE" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <GridPane prefHeight="54.0" prefWidth="236.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <RadioButton fx:id="urgent_radio" mnemonicParsing="false" text="Urgent" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="regular_radio" mnemonicParsing="false" text="Regular" textFill="WHITE" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <ChoiceBox fx:id="contact_choicebox" prefHeight="26.0" prefWidth="317.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <ChoiceBox fx:id="customer_combobox" prefHeight="26.0" prefWidth="329.0" GridPane.columnIndex="3" />
+                  <GridPane GridPane.columnIndex="3" GridPane.rowIndex="6">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <DatePicker fx:id="start_datepicker" />
+                        <ChoiceBox fx:id="start_time_combobox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="122.0" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="17.0" />
+                           </GridPane.margin>
+                        </ChoiceBox>
+                     </children>
+                  </GridPane>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#save" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #000000; -fx-background-radius: 8;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="33.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancel" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #000000; -fx-background-radius: 8;" text="Cancel" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="42.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <Label fx:id="headerLbl" alignment="CENTER" layoutX="412.0" layoutY="14.0" prefHeight="41.0" prefWidth="270.0" text="Add/Modify Appointment" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
