@@ -27,7 +27,7 @@ Password: admin
 
 **How to run the application**
 
-tart by downloading JavaFX 11.0.2. (No longer packaged with JDK11+) - https://gluonhq.com/products/javafx/
+Start by downloading JavaFX 11.0.2. (No longer packaged with JDK11+) - https://gluonhq.com/products/javafx/
 
 Once this has downloaded, add the lib folder to your project by going to
 File -> Project Structure -> libraries (Under Project Structure)
