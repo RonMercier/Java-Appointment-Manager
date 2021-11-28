@@ -14,17 +14,17 @@ import java.sql.SQLException;
 public class DBConnection {
     private static final String protocol = "jdbc";
     private static final String vendorName = ":mysql:";
-    private static final String ipAddress = "//wgudb.ucertify.com:3306/";
-    private static final String dbName = "WJ07Rbm";
+    private static final String ipAddress = "//java-aws-appt-manager.ch99jqr7bavk.us-east-2.rds.amazonaws.com:3306/";
+    private static final String dbName = "ApptManager";
     private static final String autoReconnect = "?autoReconnect=true";
 
     private static final String jdbcURL = protocol+vendorName+ipAddress+dbName+autoReconnect;
 
     private static final String MYSQLJDBCDriver = "com.mysql.cj.jdbc.Driver";
 
-    private static final String username = "U07Rbm";
+    private static final String username = "admin";
 
-    private static final String password = "53689107299";
+    private static final String password = "Division147";
 
     private static Connection conn = null;
 
