@@ -4,14 +4,53 @@
 
 ![ScreenShot](https://github.com/RonMercier/Java-Appointment-Manager/blob/master/AppointmentManagerERD.png)
 
-## Application details
+### Screenshots of application
+#### Login screen 
+![Screenshot](https://github.com/RonMercier/Java-Appointment-Manager/blob/master/ApptManagerPics/Login.png)
+
+#### Main screen
+![Screenshot](https://github.com/RonMercier/Java-Appointment-Manager/blob/master/ApptManagerPics/MainScreen.png)
+
+#### Add customer screen
+![Screenshot](https://github.com/RonMercier/Java-Appointment-Manager/blob/master/ApptManagerPics/AddCustomer.png)
+
+#### Modify customer screen
+![Screenshot](https://github.com/RonMercier/Java-Appointment-Manager/blob/master/ApptManagerPics/ModifyCustomer.png)
+
+#### Appointment screen
+![Screenshot](https://github.com/RonMercier/Java-Appointment-Manager/blob/master/ApptManagerPics/ApptScreen.png)
+
+#### Add appointment screen
+![Screenshot](https://github.com/RonMercier/Java-Appointment-Manager/blob/master/ApptManagerPics/AddApptScreen.png)
+
+#### Modify appointment screen
+![Screenshot](https://github.com/RonMercier/Java-Appointment-Manager/blob/master/ApptManagerPics/ModifyApptScreen.png)
+
+#### Contact screen
+![Screenshot](https://github.com/RonMercier/Java-Appointment-Manager/blob/master/ApptManagerPics/ContactScreen.png)
+
+#### Reports screen
+![Screenshot](https://github.com/RonMercier/Java-Appointment-Manager/blob/master/ApptManagerPics/ReportsMain.png)
+
+#### Appointment by type report
+![Screenshot](https://github.com/RonMercier/Java-Appointment-Manager/blob/master/ApptManagerPics/ApptByType.png)
+
+#### Contact schedule report
+![Screenshot](https://github.com/RonMercier/Java-Appointment-Manager/blob/master/ApptManagerPics/ContactSchedule.png)
+
+#### Appointment by customer report
+![Screenshot](https://github.com/RonMercier/Java-Appointment-Manager/blob/master/ApptManagerPics/ApptByCustomer.png)
+
+
+
+### Application details
 
 IDE: Intellij IDE 2021.2<br>
 Java version: Java SE 11.0.9<br>
 JavaFX: JavaFX-SDK-11.0.2<br>
 mysql-connector-java-8.0.22<br>
 
-## Description
+### Description
 
 This is a Java application for the C195 Software II class at WGU.
 It connects to a SQL database and allows the user review, add, modify and delete appointments and save them in the database.
@@ -20,7 +59,7 @@ It also lets the user manage customers data that are going to be linked to the a
 I created a report section that displays appointments by user, all customer appointments and contact schedule.  An active
 internet connection is required to use the application because it connects to an online database.
 
-## Login information
+### Login information
 
 User: test<br>
 Password: test
@@ -28,7 +67,7 @@ Password: test
 User: admin<br>
 Password: admin
 
-## How to run the application
+### How to run the application
 
   Start by downloading JavaFX 11.0.2. (No longer packaged with JDK11+) - https://gluonhq.com/products/javafx/
 
@@ -58,7 +97,7 @@ Password: admin
 
       --module-path ${PATH_TO_FX} --add-modules javafx.fxml,javafx.controls,javafx.graphics<br>
 
-  ## MySQL
+  ### MySQL
   
   MySQL can be added by using the Maven package manager in Intellij<br>
 
