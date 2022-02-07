@@ -52,9 +52,7 @@ mysql-connector-java-8.0.22<br>
 
 ### Description
 
-This is a Java application for the C195 Software II class at WGU.
-It connects to a SQL database and allows the user review, add, modify and delete appointments and save them in the database.
-It also lets the user manage customers data that are going to be linked to the appointments.
+This is a Java application that connects and stores appointments to a MySQL database and allows the user to review, add, modify and delete appointments that are saved in the database.  It also lets the user manage customers data that are going to be linked to the appointments.
 
 I created a report section that displays appointments by user, all customer appointments and contact schedule.  An active
 internet connection is required to use the application because it connects to an online database.
